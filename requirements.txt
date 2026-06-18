@@ -1,0 +1,6 @@
+# Runtime dependencies for the Vercel deployment (mirrors pyproject.toml).
+# uvicorn is intentionally omitted — Vercel provides its own ASGI runtime.
+fastapi==0.137.0
+httpx==0.28.1
+rich==13.9.4
+pydantic==2.10.4

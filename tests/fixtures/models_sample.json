@@ -1,0 +1,458 @@
+[
+  {
+    "Input": [
+      "Compound"
+    ],
+    "Task": "Annotation",
+    "Source Type": "External",
+    "Title": "SARS-CoV-2 Anti viral screening",
+    "Computational Performance 3": 58.14,
+    "Repository": {
+      "label": "GitHub",
+      "url": "https://github.com/ersilia-os/eos4cxk"
+    },
+    "Computational Performance 1": 31.93,
+    "Computational Performance 4": 421.92,
+    "Target Organism": [
+      "SARS-CoV-2"
+    ],
+    "Docker Architecture": [
+      "AMD64"
+    ],
+    "Output Consistency": "Fixed",
+    "Publication": "https://doi.org/10.1038/s42256-022-00557-6",
+    "Source Code": "https://github.com/HongxinXiang/ImageMol",
+    "Output": [
+      "Score"
+    ],
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos4cxk.zip",
+    "Contributor Profile": "https://github.com/DhanshreeA",
+    "Slug": "image-mol-sars-cov2",
+    "Publication Year": 2022,
+    "Computational Performance 5": -1,
+    "GitHub": "https://github.com/ersilia-os/eos4cxk",
+    "Computational Performance 2": 24.75,
+    "Tag": [
+      "Antiviral activity"
+    ],
+    "Incorporation Quarter": "Q1",
+    "Environment Size": 8386,
+    "Interpretation": "Probability of the molecule being active in each assay",
+    "Last Packaging Date": "2026-03-10",
+    "Incorporation Date": "2023-01-25",
+    "Input Dimension": 1,
+    "Output Dimension": 13,
+    "Image Size": 10014.36,
+    "Model Size": 556,
+    "Description": "ImageMol is a Representation Learning Framework that utilizes molecule images for encoding molecular inputs as machine readable vectors for downstream tasks such as bio-activity prediction, drug metabolism analysis, or drug toxicity prediction. The approach utilizes transfer learning, pre-training the model on massive unlabeled datasets to help it in generalizing feature extraction and then fine tuning on specific tasks. This model is fine tuned on 13 assays with target categories ranging from viral entry to toxicity in humans. These interactions are formulated as binary classification tasks\n",
+    "Publication Type": "Peer reviewed",
+    "Release": "v1.0.0",
+    "Biomedical Area": [
+      "COVID-19"
+    ],
+    "Deployment": [
+      "Local"
+    ],
+    "Contributor": "DhanshreeA",
+    "License": "MIT",
+    "Status": "Ready",
+    "Incorporation Year": "2023",
+    "DockerHub": "https://hub.docker.com/r/ersiliaos/eos4cxk",
+    "Subtask": "Activity prediction",
+    "Identifier": "eos4cxk",
+    "Source": "Local"
+  },
+  {
+    "Input": [
+      "Compound"
+    ],
+    "Task": "Annotation",
+    "Source Type": "Internal",
+    "Title": "H3D virtual screening cascade light",
+    "Computational Performance 3": 19.87,
+    "Repository": {
+      "label": "GitHub",
+      "url": "https://github.com/ersilia-os/eos7kpb"
+    },
+    "Computational Performance 1": 30.03,
+    "Computational Performance 4": 48.23,
+    "Target Organism": [
+      "Mycobacterium tuberculosis",
+      "Plasmodium falciparum",
+      "Homo sapiens",
+      "Rattus norvegicus",
+      "Mus musculus"
+    ],
+    "Docker Architecture": [
+      "AMD64",
+      "ARM64"
+    ],
+    "Output Consistency": "Fixed",
+    "Publication": "https://doi.org/10.1038/s41467-023-41512-2",
+    "Source Code": "https://github.com/ersilia-os/h3d-screening-cascade-models",
+    "Output": [
+      "Score"
+    ],
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos7kpb.zip",
+    "Contributor Profile": "https://github.com/miquelduranfrigola",
+    "Slug": "h3d-virtual-screening-cascade-light",
+    "Publication Year": 2023,
+    "Computational Performance 5": 181.16,
+    "GitHub": "https://github.com/ersilia-os/eos7kpb",
+    "Computational Performance 2": 19.66,
+    "Tag": [
+      "ADME",
+      "Cytotoxicity",
+      "Solubility",
+      "Antimicrobial activity"
+    ],
+    "Incorporation Quarter": "Q2",
+    "Environment Size": 1115,
+    "Interpretation": "The raw scores are the ones emerging from the FLAML model. The ones with a sufix _norm represent the percentile in the scale 0-1 over a ChEMBL dataset of 200k compounds.",
+    "Last Packaging Date": "2025-11-18",
+    "Incorporation Date": "2023-05-09",
+    "Input Dimension": 1,
+    "Output Dimension": 28,
+    "Image Size": 1351.98,
+    "Model Size": 117,
+    "Description": "This panel of models provides predictions for the H3D virtual screening cascade. It leverages the Ersilia Compound Embedding and FLAML. The H3D virtual screening cascade contains models for Mycobacterium tuberculosis and Plasmodium falciparum IC50 predictions, as well as ADME, cytotoxicity and solubility assays\n",
+    "Publication Type": "Peer reviewed",
+    "Release": "v1.0.0",
+    "Biomedical Area": [
+      "ADMET",
+      "Malaria",
+      "Tuberculosis"
+    ],
+    "Deployment": [
+      "Local"
+    ],
+    "Contributor": "miquelduranfrigola",
+    "License": "GPL-3.0-or-later",
+    "Status": "Ready",
+    "Incorporation Year": "2023",
+    "DockerHub": "https://hub.docker.com/r/ersiliaos/eos7kpb",
+    "Subtask": "Activity prediction",
+    "Identifier": "eos7kpb",
+    "Source": "Local"
+  },
+  {
+    "Input": [
+      "Compound"
+    ],
+    "Task": "Annotation",
+    "Source Type": "External",
+    "Title": "FASTSOLV solubility prediction",
+    "Computational Performance 3": 67.33,
+    "Repository": {
+      "label": "GitHub",
+      "url": "https://github.com/ersilia-os/eos8g50"
+    },
+    "Computational Performance 1": 37.53,
+    "Computational Performance 4": 515.13,
+    "Target Organism": [
+      "Any"
+    ],
+    "Docker Architecture": [
+      "AMD64"
+    ],
+    "Output Consistency": "Fixed",
+    "Publication": "https://doi.org/10.1038/s41467-025-62717-7",
+    "Source Code": "https://github.com/JacksonBurns/fastsolv",
+    "Output": [
+      "Value"
+    ],
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8g50.zip",
+    "Contributor Profile": "https://github.com/arnaucoma24",
+    "Slug": "fastsolv",
+    "Publication Year": 2025,
+    "Computational Performance 5": -1,
+    "GitHub": "https://github.com/ersilia-os/eos8g50",
+    "Computational Performance 2": 30.52,
+    "Tag": [
+      "Solubility"
+    ],
+    "Incorporation Quarter": "Q3",
+    "Environment Size": 1851,
+    "Interpretation": "Array of predicted log-scale solubility values in 15 organic solvents (all ASKOS organic solvents) for each input compound.",
+    "Last Packaging Date": "2026-03-23",
+    "Incorporation Date": "2025-08-27",
+    "Input Dimension": 1,
+    "Output Dimension": 15,
+    "Image Size": 4361.4,
+    "Model Size": 878,
+    "Description": "Prediction of organic solubility using deep learning on fixed Mordred-based representations. The authors test the models under rigorous solute extrapolation conditions, outperforming existing methods and demonstrating prediction accuracy near the intrinsic aleatoric limit of experimental data.\n",
+    "Publication Type": "Peer reviewed",
+    "Release": "v1.0.0",
+    "Biomedical Area": [
+      "Any"
+    ],
+    "Deployment": [
+      "Local"
+    ],
+    "Contributor": "arnaucoma24",
+    "License": "MIT",
+    "Status": "Ready",
+    "Incorporation Year": "2025",
+    "DockerHub": "https://hub.docker.com/r/ersiliaos/eos8g50",
+    "Subtask": "Property calculation or prediction",
+    "Identifier": "eos8g50",
+    "Source": "Local"
+  },
+  {
+    "Input": [
+      "Compound"
+    ],
+    "Task": "Representation",
+    "Source Type": "External",
+    "Title": "Natural product fingerprint",
+    "Computational Performance 3": 18.28,
+    "Repository": {
+      "label": "GitHub",
+      "url": "https://github.com/ersilia-os/eos6tg8"
+    },
+    "Computational Performance 1": 28.29,
+    "Computational Performance 4": 31.41,
+    "Target Organism": [
+      "Any"
+    ],
+    "Docker Architecture": [
+      "AMD64"
+    ],
+    "Output Consistency": "Fixed",
+    "Publication": "https://doi.org/10.1016/j.csbj.2021.07.032",
+    "Source Code": "https://github.com/kochgroup/neural_npfp",
+    "Output": [
+      "Value"
+    ],
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos6tg8.zip",
+    "Contributor Profile": "https://github.com/miquelduranfrigola",
+    "Slug": "natural-product-fingerprint",
+    "Publication Year": 2021,
+    "Computational Performance 5": 91.7,
+    "GitHub": "https://github.com/ersilia-os/eos6tg8",
+    "Computational Performance 2": 18,
+    "Tag": [
+      "Natural product",
+      "Fingerprint",
+      "Descriptor"
+    ],
+    "Incorporation Quarter": "Q4",
+    "Environment Size": 2156,
+    "Interpretation": "Descriptor of a molecule",
+    "Last Packaging Date": "2025-10-13",
+    "Incorporation Date": "2021-11-03",
+    "Input Dimension": 1,
+    "Output Dimension": 65,
+    "Image Size": 1427.77,
+    "Model Size": 120,
+    "Description": "The model uses a combination of two multilayer perceptron networks (baseline and auxiliar) and an autoencoder-like network to extract natural-product specific fingerprints that outperform traditional methods for molecular representation. The training sets correspond to the coconut database (NP) and the Zinc database (synthetic). \n",
+    "Publication Type": "Peer reviewed",
+    "Release": "v1.0.0",
+    "Biomedical Area": [
+      "Any"
+    ],
+    "Deployment": [
+      "Local"
+    ],
+    "Contributor": "miquelduranfrigola",
+    "License": "None",
+    "Status": "Ready",
+    "Incorporation Year": "2021",
+    "DockerHub": "https://hub.docker.com/r/ersiliaos/eos6tg8",
+    "Subtask": "Featurization",
+    "Identifier": "eos6tg8",
+    "Source": "Local"
+  },
+  {
+    "Input": [
+      "Compound"
+    ],
+    "Task": "Sampling",
+    "Source Type": "External",
+    "Title": "SQUID 3D shape generation",
+    "Computational Performance 3": 1551.03,
+    "Repository": {
+      "label": "GitHub",
+      "url": "https://github.com/ersilia-os/eos8vud"
+    },
+    "Computational Performance 1": 31.49,
+    "Computational Performance 4": -1,
+    "Target Organism": [
+      "Any"
+    ],
+    "Docker Architecture": [
+      "AMD64",
+      "ARM64"
+    ],
+    "Output Consistency": "Variable",
+    "Publication": "https://doi.org/10.48550/arXiv.2210.04893",
+    "Source Code": "https://github.com/keiradams/SQUID",
+    "Output": [
+      "Compound"
+    ],
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos8vud.zip",
+    "Contributor Profile": "https://github.com/miquelduranfrigola",
+    "Slug": "squid",
+    "Publication Year": 2022,
+    "Computational Performance 5": -1,
+    "GitHub": "https://github.com/ersilia-os/eos8vud",
+    "Computational Performance 2": 189.94,
+    "Tag": [
+      "Compound generation"
+    ],
+    "Incorporation Quarter": "Q2",
+    "Environment Size": 2594,
+    "Interpretation": "Molecules matching the 3D shape of the input compound are suggested",
+    "Last Packaging Date": "2026-02-13",
+    "Incorporation Date": "2024-05-01",
+    "Input Dimension": 1,
+    "Output Dimension": 10,
+    "Image Size": 1095.44,
+    "Model Size": 371,
+    "Description": "Equivariant shape-conditioned generation of 3D molecules for ligand-based drug design. SQUID can generate chemically diverse molecules for arbitrary molecular shapes. Shape is defined by the input molecule.\n",
+    "Publication Type": "Peer reviewed",
+    "Release": "v1.0.0",
+    "Biomedical Area": [
+      "Any"
+    ],
+    "Deployment": [
+      "Local"
+    ],
+    "Contributor": "miquelduranfrigola",
+    "License": "MIT",
+    "Status": "Ready",
+    "Incorporation Year": "2024",
+    "DockerHub": "https://hub.docker.com/r/ersiliaos/eos8vud",
+    "Subtask": "Generation",
+    "Identifier": "eos8vud",
+    "Source": "Local"
+  },
+  {
+    "Input": [
+      "Compound"
+    ],
+    "Task": "Annotation",
+    "Source Type": "Internal",
+    "Title": "Acinetobacter baumannii activity prediction",
+    "Computational Performance 3": 22.49,
+    "Repository": {
+      "label": "GitHub",
+      "url": "https://github.com/ersilia-os/eos5dti"
+    },
+    "Computational Performance 1": 33.06,
+    "Computational Performance 4": 79.43,
+    "Target Organism": [
+      "Acinetobacter baumannii"
+    ],
+    "Docker Architecture": [
+      "AMD64",
+      "ARM64"
+    ],
+    "Output Consistency": "Fixed",
+    "Publication": "https://ersilia.io/",
+    "Source Code": "https://github.com/ersilia-os/chembl-antimicrobial-models",
+    "Output": [
+      "Score"
+    ],
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos5dti.zip",
+    "Contributor Profile": "https://github.com/arnaucoma24",
+    "Slug": "chembl-abaumannii",
+    "Publication Year": 2025,
+    "Computational Performance 5": 335,
+    "GitHub": "https://github.com/ersilia-os/eos5dti",
+    "Computational Performance 2": 22.46,
+    "Tag": [
+      "Antimicrobial activity",
+      "ChEMBL"
+    ],
+    "Incorporation Quarter": "Q2",
+    "Environment Size": 731,
+    "Interpretation": "The higher the probabilities and the global consensus scores, the more likely this compound is active against Acinetobacter baumannii",
+    "Last Packaging Date": "2025-08-27",
+    "Incorporation Date": "2025-06-13",
+    "Input Dimension": 1,
+    "Output Dimension": 26,
+    "Image Size": 2145.61,
+    "Model Size": 473,
+    "Description": "Acinetobacter baumannii activity prediction based on phenotypic ChEMBL data. Each column corresponds to a specific bioactivity dataset derived from ChEMBL, encompassing multiple assays and binarization cut-offs. The global consensus score summarizes the probability of being active. Model developed by Ersilia.\n",
+    "Publication Type": "Other",
+    "Release": "v1.0.0",
+    "Biomedical Area": [
+      "Antimicrobial resistance"
+    ],
+    "Deployment": [
+      "Local"
+    ],
+    "Contributor": "arnaucoma24",
+    "License": "GPL-3.0-only",
+    "Status": "Archived",
+    "Incorporation Year": "2025",
+    "DockerHub": "https://hub.docker.com/r/ersiliaos/eos5dti",
+    "Subtask": "Activity prediction",
+    "Identifier": "eos5dti",
+    "Source": "Local"
+  },
+  {
+    "Input": [
+      "Compound"
+    ],
+    "Task": "Annotation",
+    "Source Type": "Replicated",
+    "Title": "Hemozoin inhibitor prediction using simple physicochemical parameters",
+    "Computational Performance 3": 17.49,
+    "Repository": {
+      "label": "GitHub",
+      "url": "https://github.com/ersilia-os/eos9n1s"
+    },
+    "Computational Performance 1": 27.78,
+    "Computational Performance 4": 20.04,
+    "Target Organism": [
+      "Plasmodium falciparum"
+    ],
+    "Docker Architecture": [
+      "AMD64"
+    ],
+    "Output Consistency": "Fixed",
+    "Publication": "https://doi.org/10.1128/aac.01607-16",
+    "Source Code": "https://github.com/ersilia-os/eos9n1s",
+    "Output": [
+      "Score"
+    ],
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos9n1s.zip",
+    "Contributor Profile": "https://github.com/miquelduranfrigola",
+    "Slug": "hemozoin-inhibition-physchem",
+    "Publication Year": 2017,
+    "Computational Performance 5": 31.41,
+    "GitHub": "https://github.com/ersilia-os/eos9n1s",
+    "Computational Performance 2": 17.43,
+    "Tag": [
+      "Antiparasitic activity"
+    ],
+    "Incorporation Quarter": "Q1",
+    "Environment Size": 500,
+    "Interpretation": "Probability of hemozoin inhibition based on a traditional multivariate model",
+    "Last Packaging Date": "2026-02-04",
+    "Incorporation Date": "2026-02-03",
+    "Input Dimension": 1,
+    "Output Dimension": 1,
+    "Image Size": 450.49,
+    "Model Size": 1,
+    "Description": "This very simple model using simple physicochemical parameters to predict hemozoin inhibition. The model is based on a HTS assay on 9, 600 compounds, from which 224 were hits and another 199 were randomly sampled as negatives. A traditional multivariate model was used to find a simple classifier of hemozoin inhibition. Originally, the model used ChemSpyder descriptors. Here, we replaced them with calculated (RDKit) versions of them. The Bayesian Model Averaging (BMA) was not implemented due to the need for refractive index estimation, which is not straightforward from SMILES.\n",
+    "Publication Type": "Peer reviewed",
+    "Release": "v1.0.0",
+    "Biomedical Area": [
+      "Malaria"
+    ],
+    "Deployment": [
+      "Local"
+    ],
+    "Contributor": "miquelduranfrigola",
+    "License": "GPL-3.0-only",
+    "Status": "Ready",
+    "Incorporation Year": "2026",
+    "DockerHub": "https://hub.docker.com/r/ersiliaos/eos9n1s",
+    "Subtask": "Activity prediction",
+    "Identifier": "eos9n1s",
+    "Source": "Local"
+  }
+]

@@ -24,3 +24,22 @@ FIELD_GROUPS = {
     ],
     "identifier": ["Identifier", "Slug", "Title"],
 }
+
+# Curated record fields returned in search results (the API adds score,
+# matched_keywords and matches on top of these).
+OUTPUT_FIELDS = [
+    "Identifier",
+    "Slug",
+    "Title",
+    "Task",
+    "Subtask",
+    "Status",
+    "Description",
+    "Interpretation",
+    "Tag",
+    "Biomedical Area",
+    "Target Organism",
+    "License",
+    "Publication Year",
+    "GitHub",
+]

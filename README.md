@@ -1,37 +1,63 @@
-# My Ersilia Python Package
+# Search engine for the Ersilia Model Hub
 
-Template repository for an Ersilia Python package.
+A small FastAPI service and CLI to search the [Ersilia Model Hub](https://github.com/ersilia-os/ersilia) catalog by keyword and structured filters. It returns ranked models as CSV, with an explanation of *why* each model matched.
 
-This package provides a foundation for developing and distributing Python tools within the Ersilia ecosystem. It is designed to help researchers and developers quickly set up, share, and maintain reproducible code for AI/ML models, particularly in the context of antimicrobial drug discovery. If you are developing a package, use this paragraph as placeholder for an introduction about the package.
+The API reads the live model catalog from S3 at runtime (cached, refreshed daily), so results stay current without redeploying.
 
-## Installation
-
-To get started, create a Conda environment:
+## Install
 
 ```bash
-conda create -n my_env python=3.12
-conda activate my_env
+conda create -n ersilia-search python=3.12
+conda activate ersilia-search
+pip install git+https://github.com/ersilia-os/search-engine.git
 ```
 
-Then install the package using pip:
+For development (tests and running the API locally) install the dev extras from a clone:
 
 ```bash
-pip install git+https://github.com/ersilia-os/my-ersilia-python-package.git
+pip install -e ".[dev]"
 ```
 
-## Quick start
+## CLI
 
-Provide an end-to-end usage example. All data should be included in the repository for reproducibility.
+Query the API and write ranked results as CSV:
 
-Example:
-
-```python
-from my_package.core import hello
-
-hello("Ersilia")
+```bash
+ersilia_search --text "solubility" --task Annotation --limit 10 -o results.csv
 ```
 
-This prints `"Hello, Ersilia!"` in the Python terminal.
+| Option | Description |
+|---|---|
+| `--text, -t` | Free-text keyword query (drives ranking) |
+| `--task` | Filter by task (repeatable) |
+| `--subtask` | Filter by subtask (repeatable) |
+| `--status` | Filter by status (repeatable; default: Ready only) |
+| `--tag` | Filter by tag (repeatable) |
+| `--biomedical-area` | Filter by biomedical area (repeatable) |
+| `--target-organism` | Filter by target organism (repeatable) |
+| `--all-statuses` | Include non-Ready models |
+| `--limit` | Maximum results (default 50) |
+| `--list-facets` | List valid filter values and exit |
+| `-o, --output-file` | Write CSV to a file (default: stdout) |
+| `--api-url` | API base URL (env: `ERSILIA_SEARCH_API_URL`) |
+
+Filters combine as **AND across fields, OR within a field**: `--task Annotation --task Representation --biomedical-area Malaria` means *(Annotation or Representation) and Malaria*.
+
+## API
+
+Run locally (needs the `dev` extras for `uvicorn`):
+
+```bash
+uvicorn ersilia_search.api.app:app --reload
+```
+
+| Endpoint | Description |
+|---|---|
+| `GET /search` | Ranked, filtered models (JSON) |
+| `GET /facets` | Valid values for each filterable field |
+| `GET /healthz` | Health check and model count |
+
+Interactive docs at `/docs`. The CLI defaults to `http://localhost:8000`; point it at the deployed service with `--api-url` or by setting `ERSILIA_SEARCH_API_URL`.
 
 ## About the Ersilia Open Source Initiative
 
