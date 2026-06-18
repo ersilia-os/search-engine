@@ -10,7 +10,7 @@ DEFAULT_DATA_URL = "https://ersilia-model-hub.s3.eu-central-1.amazonaws.com/mode
 DEFAULT_CACHE_TTL = 86_400  # seconds (~24h) the in-memory catalog is considered fresh
 
 # --- CLI -------------------------------------------------------------------
-DEFAULT_API_URL = "http://localhost:8000"  # later: the deployed Vercel URL
+DEFAULT_API_URL = "https://search-engine-six-iota.vercel.app"  # deployed Vercel endpoint
 
 # --- Ranking knobs ---------------------------------------------------------
 FIELD_WEIGHTS = {
